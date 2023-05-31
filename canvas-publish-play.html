@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>WebRTC Samples > Publish</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="css/external/bootstrap4/bootstrap.min.css">
+	<link rel="stylesheet" href="css/samples.css" />
+	<style>
+		.box {
+			display: inline-block;
+		}
+		@media ( min-width : 768px) {
+		.container {
+			max-width: 10000px;
+		}
+		}
+	</style>
+</head>
+
+<body>
+	<div class="container">
+		<div class="header clearfix">
+			<div class="row">
+				<h3 class="col text-muted"><a href="samples.html">WebRTC Samples</a> > Interactive Canvas Publish & Play
+				</h3>
+			</div>
+		</div>
+		<div class="box" style="width: 49%">
+			<iframe class="embed-frame" id="webrtc-publish-frame" allow="camera;microphone;display-capture"
+				frameborder="0" scrolling="no" width="1000" height="1000" align="left"></iframe>
+		</div>
+		<div class="box" style="width: 50%">
+			<iframe id="webrtc-play-frame" class="embed-frame" allow="camera;microphone;display-capture" scrolling="no"
+				width="1000" height="1000" align="right"></iframe>
+		</div>
+	</div>
+	<script type="module">
+		import { getUrlParameter } from "./js/fetch.stream.js"
+		import { getQueryParameter } from "./js/utility.js"
+		import { generateRandomString, getWebSocketURL } from "./js/utility.js"
+
+
+		let myIframe = document.getElementById("webrtc-publish-frame");
+		let myIframe2 = document.getElementById("webrtc-play-frame");
+		let url_string=""
+		let publishPageName = "canvas-publish-frame.html";
+		let playPageName = "canvas-player-frame.html";
+		let streamid = getQueryParameter("id") || generateRandomString(9);
+		var debug = getUrlParameter("debug");
+
+		if (debug == null) {
+			debug = false;
+		}
+		url_string += "?debug=" + debug;
+		url_string += "&id="+streamid;
+
+		myIframe2.src += playPageName  + url_string;
+
+		console.log(url_string);
+		myIframe.src = publishPageName + url_string;
+	</script>
+
+</body>
+
+
+</html>
