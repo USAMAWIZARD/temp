@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>WebRTC Samples > Data Channel Only</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="css/external/bootstrap4/bootstrap.min.css">
+	<link rel="stylesheet" href="css/samples.css" />
+</head>
+
+<body>
+    
+    <div class="header clearfix row col-custom text-left">
+        <div class="row ">
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-8">
+            <h3 class="col text-muted"><a href="samples.html">WebRTC Samples</a> > WebRTC Conference</h3>     
+            <iframe class="embed-frame" id="webrtc-publish-frame" allow="camera;microphone;display-capture"></iframe>
+        </div>
+    </div>
+	<script  type="module">
+		import {getUrlParameter} from "./js/fetch.stream.js" 
+		import {getQueryParameter} from "./js/utility.js" 
+
+		let myIframe = document.getElementById("webrtc-publish-frame");
+		let url_string = " samples/multitrack-conference.html";
+
+
+        var token = getUrlParameter("token");
+        var publishStreamId = getUrlParameter("streamId");
+        var playOnly = getUrlParameter("playOnly");
+        var dcOnly = getUrlParameter("dcOnly");
+
+
+		var debug = getUrlParameter("debug");
+		if (debug == null) {
+			debug = false;
+		}
+		url_string += "?debug=" + debug;
+			
+		url_string += getQueryParameter("id");
+
+		console.log(url_string);
+		myIframe.src = url_string;
+	</script>
+
+</body>
+</html>
