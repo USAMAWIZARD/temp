@@ -11,7 +11,7 @@ dissect_dtls_record: content_type 22 epoch 0 seq 1
 
 dissect_dtls enter frame #3 (already visited)
 packet_from_server: is from server - TRUE
-dissect_dtls_record: content_type 22 epoch 0 seq 2
+dissect_dtls_record: content_type 22 epoch 0 seq 2asfasf
 
 dissect_dtls enter frame #4 (already visited)
 packet_from_server: is from server - TRUE
