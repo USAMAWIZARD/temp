@@ -17,7 +17,7 @@ mouseAccelerationCurve: 2.0
 startMouseSpeed: 0.0
 # same for deceleration
 mouseDecelerationTime: 300.0
-mouseDecelerationCurve: 3.0
+mouseDecelerationCurve: 3.0   
 
 # the rest of the config defines the layers with their bindings
 layers:
