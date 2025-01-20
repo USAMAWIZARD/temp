@@ -3,7 +3,7 @@ name: Conditional CI/CD Pipeline
 on:
   push:
     branches:
-      - main
+      - master
 
 jobs:
   conditional-job:
