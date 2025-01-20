@@ -8,11 +8,11 @@ on:
 jobs:
   conditional-job:
     runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/master' && contains(github.event.head_commit.message, 'release')
     steps:
       - name: Checkout Code
         uses: actions/checkout@v3
-        if: github.ref == 'refs/heads/main' && contains(github.event.head_commit.message, 'release')
+
       - name: Run Conditional Step
         run: |
           echo "This step runs only when on the main branch and the commit message contains 'release'."
-   
