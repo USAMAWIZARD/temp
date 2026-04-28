@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Usama & Nauma | Wedding Invitation</title>
+    <meta
+      name="description"
+      content="An interactive wedding invitation with a click-to-open card and wedding event details."
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <div class="hero-glow hero-glow--one"></div>
+      <div class="hero-glow hero-glow--two"></div>
+      <nav class="topbar">
+        <p class="brand">Wedding Invitation</p>
+      </nav>
+
+      <section class="hero-layout">
+        <div class="hero-copy reveal is-visible">
+          <p class="eyebrow">Together with their families</p>
+          <h1>Usama <span>&</span> Nauma</h1>
+          <p class="subtitle">
+            Invite you to celebrate their wedding day and the beginning of a beautiful forever.
+          </p>
+          <p class="date-line">Nikah: 7 May, 10:00 AM • Reception: 9 May, 8:00 PM</p>
+
+          <div class="hero-actions">
+            <a href="#invitation" class="button-link">Open Invitation</a>
+            <a href="#gallery" class="button-link button-link--ghost">View Moments</a>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal is-visible">
+          <div class="hero-photo hero-photo--large">
+            <img
+              src="sign.jpeg"
+              alt="Indian wedding couple holding hands"
+            />
+          </div>
+          <div class="hero-badge">
+            <span>07</span>
+            <p>May 2026</p>
+          </div>
+        </div>
+      </section>
+    </header>
+
+    <main>
+      <section class="scroll-stage" id="invitation">
+        <div class="scroll-stage__sticky">
+          <p class="scroll-hint">Tap the invitation card to open it</p>
+
+          <div
+            class="invitation-card"
+            id="invitation-card"
+            role="button"
+            tabindex="0"
+            aria-expanded="false"
+            aria-label="Open invitation card"
+          >
+            <div class="card-shell">
+              <div class="card-panel card-panel--left">
+                <div class="panel-text">
+                  <p class="panel-label">The Wedding</p>
+                  <h2>Open the Invitation</h2>
+                </div>
+              </div>
+
+              <div class="card-panel card-panel--right">
+                <div class="panel-text">
+                  <p class="panel-label">Save the Date</p>
+                  <p>07.05.2026</p>
+                </div>
+              </div>
+
+              <div class="card-inside">
+                <p class="inside-kicker">Bismillah ir-Rahman ir-Rahim</p>
+                <h2>You are warmly invited</h2>
+                <p class="inside-copy">
+                  Join us for our Nikah and reception as we begin our new chapter with your prayers
+                  and presence.
+                </p>
+
+                <div class="inside-grid">
+                  <article>
+                    <p class="detail-label">Nikah</p>
+                    <p>7 May 2026, 10:00 AM</p>
+                    <p>Moti Masjid, Mominpura, Dewalghat, Dist. Buldhana</p>
+                  </article>
+                  <article>
+                    <p class="detail-label">Lunch</p>
+                    <p>After Nikah, 11:00 AM</p>
+                    <p>Ritha Masjid, Mominpura, Dewalghat, Dist. Buldhana</p>
+                  </article>
+                  <article>
+                    <p class="detail-label">Reception</p>
+                    <p>9 May 2026, 8:00 PM</p>
+                    <p>Grand Orchid Wedding Hall, Reti Bunder, Mumbra, Thane</p>
+                  </article>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <button type="button" class="invitation-toggle" id="invitation-toggle">
+            Open Invitation
+          </button>
+        </div>
+      </section>
+
+      <section class="content-section content-section--accent reveal timer-section">
+        <div class="section-heading">
+          <p class="eyebrow">The Celebration</p>
+          <h2>Countdown To Nikah</h2>
+        </div>
+
+        <div class="countdown" id="countdown" aria-live="polite">
+          <article class="countdown-card">
+            <p class="countdown-number" id="days">0</p>
+            <p class="countdown-label">Days</p>
+          </article>
+          <article class="countdown-card">
+            <p class="countdown-number" id="hours">0</p>
+            <p class="countdown-label">Hours</p>
+          </article>
+          <article class="countdown-card">
+            <p class="countdown-number" id="minutes">0</p>
+            <p class="countdown-label">Minutes</p>
+          </article>
+          <article class="countdown-card">
+            <p class="countdown-number" id="seconds">0</p>
+            <p class="countdown-label">Seconds</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="content-section reveal" id="gallery">
+        <div class="section-heading">
+          <p class="eyebrow">Captured Feelings</p>
+          <h2>Moments To Remember</h2>
+        </div>
+
+        <div class="gallery-grid">
+          <figure class="gallery-card gallery-card--tall">
+            <img
+              src="we.jpeg"
+              alt="Mehndi hands closeup"
+              loading="lazy"
+            />
+            <figcaption>A beautiful evening prepared for family and friends.</figcaption>
+          </figure>
+
+          <figure class="gallery-card">
+            <img
+              src="standing.jpeg"
+              alt="Wedding hands with rings"
+              loading="lazy"
+            />
+            <figcaption>Warm lights, flowers, and details made with love.</figcaption>
+          </figure>
+
+          <figure class="gallery-card">
+            <img
+              src="handholding.jpeg"
+              alt="Indian wedding couple hands closeup"
+              loading="lazy"
+            />
+            <figcaption>An evening full of joy, ds uas, and celebration.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="content-section reveal">
+        <div class="story-layout">
+          <div>
+            <p class="eyebrow">A Little Note</p>
+            <h2>With love and gratitude</h2>
+            <p class="body-copy">
+              Your presence means the world to us. We would be honored to celebrate this special
+              day surrounded by the prayers, smiles, and blessings of the people we love most.
+            </p>
+            <p class="body-copy">
+              Please join us for the Nikah on 7 May at Moti Masjid, Mominpura, Dewalghat, Dist.
+              Buldhana, lunch afterward at Ritha Masjid, Mominpura, Dewalghat, Dist. Buldhana,
+              and the reception on 9 May at Grand Orchid Wedding Hall, Reti Bunder, Mumbra,
+              Thane.
+            </p>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="site-footer">
+      <p>Made with love for a joyful celebration.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
