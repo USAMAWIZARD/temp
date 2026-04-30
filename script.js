@@ -69,12 +69,12 @@ function updateCountdown() {
   if (!daysEl || !hoursEl || !minutesEl || !secondsEl) return;
 
   const now = new Date();
-  // Target: 7 May, 11:00 PM IST (UTC+5:30) => 17:30 UTC.
+  // Target: 7 May, 11:00 AM IST (UTC+5:30) => 05:30 UTC.
   let targetYear = now.getUTCFullYear();
-  let targetDate = new Date(Date.UTC(targetYear, 4, 7, 17, 30, 0));
+  let targetDate = new Date(Date.UTC(targetYear, 4, 7, 5, 30, 0));
   while (targetDate <= now) {
     targetYear += 1;
-    targetDate = new Date(Date.UTC(targetYear, 4, 7, 17, 30, 0));
+    targetDate = new Date(Date.UTC(targetYear, 4, 7, 5, 30, 0));
   }
   const diffMs = targetDate - now;
 
